@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Etusivu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <style>
+        h1.intro {
+            color: darkblue;
+            text-align: center;
+            font-family: courier;
+        }
+
+        .important {
+            background-color: powderblue;
+            border: 2px solid DodgerBlue;
+        }
+
+
+        .important {
+            background-color: powderblue;
+            border: 2px solid DodgerBlue;
+        }
+    </style>
+</head>
+
+<body style="background-color:powderblue;">
+
+    <h1 class="intro important">Kivakanava &#8669; älykästä keskustelua hyvässä hengessä</h1>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <br>
+                <h2>Kirjaudu palveluun:</h2>
+
+                <form th:action="@{/etusivu}" method="GET">
+
+                    Käyttäjätunnus:<br>
+                    <input type="text" name="username" />
+                    <br>
+                    Salasana:<br>
+                    <input type="password" name="password" />
+                    <br><br>
+                    <input type="submit" value="Kirjaudu">
+                </form>
+            </div>
+
+            
+
+            <div class="col">
+                <br>
+                <h2>Rekisteröidy palveluun!</h2>
+                <p>Jos haluat mukaan keskusteluun, luo itsellesi tunnukset tässä.</p>
+
+
+
+                <form th:action="@{/etusivu}" method="POST">
+                    Nimi:<br>
+                    <input type="text" name="nimi" />
+                    <br>
+                    Käyttäjätunnus:<br>
+                    <input type="text" name="tunnus" />
+                    <br>
+                    Salasana:<br>
+                    <input type="password" name="salasana" />
+                    <br>
+                    Profiilinimi (nimen perusteella muut käyttäjät voivat löytää sivusi):<br>
+                    <input type="text" name="profiili" />
+                    <br>
+                    <br>
+                    <input type="submit" value="Lähetä tiedot">
+                </form>
+                <br>
+                <p>Rekisteröitymällä sitoudut noudattamaan keskustelukanavan sääntöjä*.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <footer class="intro important"> <small>*Keskustelukanavalla on vain yksi sääntö: kaikkien käyttäjien pitää
+            noudattaa kohteliaisuutta ja kauniita käytöstapoja. Asiattomasti tai rumasti toimivia henkilöitä tullaan
+            halveksumaan ankarasti. </small>
+
+    </footer>
+</body>
+
+</html>

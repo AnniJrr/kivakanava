@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Oma profiili</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <style>
+        h1.intro {
+            color: darkblue;
+            text-align: center;
+            font-family: courier;
+        }
+
+        .important {
+            background-color: powderblue;
+            border: 2px solid DodgerBlue;
+        }
+
+
+        .important {
+            background-color: powderblue;
+            border: 2px solid DodgerBlue;
+        }
+    </style>
+</head>
+
+<body style="background-color:powderblue;">
+
+    <h1 class="intro important">Kivakanava &#8669; Tervetuloa keskustelemaan! </h1>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4"> <br>
+
+                <h2>Kirjoita viesti</h2>
+
+                <form action="/action_page.php">
+                    Viestin maksimipituus on 140 merkkiä.<br>
+                    <p>
+                        <textarea type="text" rows="3" cols="35"></textarea> </p>
+
+                    <input type="submit" value="Lähetä">
+                    </input>
+                </form>
+
+            </div>
+
+
+            <div class="col-4">
+                <br>
+                <h2>Seinä</h2>
+                <p>Omat ja seuraajien viestit.</p>
+
+            </div>
+            <div class="col-4">
+                <br>
+                <h2>Kaipaatko lisää keskusteluseuraa?</h2>
+
+
+                <h2>Haku:</h2>
+                <p>Etsi Twitterin käyttäjää nimellä.</p>
+
+                <form action="/action_page.php">
+                    Nimi tai osa nimestä:
+                    <input type="search" name="googlesearch">
+                    <input type="submit" value="Hae">
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
